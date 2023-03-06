@@ -1,1 +1,0 @@
-# sharifov-arsen.github.io
