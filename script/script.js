@@ -1,7 +1,7 @@
 AOS.init({
   once: true,
 });
-closeMenu(true)
+
 //carrousel
 let carrousel = document.getElementById("carrousel");
 let carrouselImgNumb = 1;
