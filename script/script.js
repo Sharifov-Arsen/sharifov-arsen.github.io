@@ -1,7 +1,7 @@
 AOS.init({
   once: true,
 });
-
+closeMenu(true)
 //carrousel
 let carrousel = document.getElementById("carrousel");
 let carrouselImgNumb = 1;
@@ -301,3 +301,46 @@ window.addEventListener('resize', function (event) {
     dish8.style.display = "block";
   }
 }, true);
+
+function closeMenu(initial){
+  const menu = document.getElementsByClassName("menu")[0];
+  const menuWrapper = document.getElementsByClassName("menu__wrapper")[0];
+  const menuPart1 = document.getElementsByClassName("menu__part-1")[0];
+  const menuPart2 = document.getElementsByClassName("menu__part-2")[0];
+  const buttonMenu = document.getElementsByClassName("buttonMenu")[0];
+  const isMenuOpen = localStorage.getItem("isMenuOpen") || false
+  console.log(isMenuOpen)
+  if(initial){
+    if (isMenuOpen === 'true'){
+ 
+      menu.style.height = "64px";
+      menuWrapper.style.height = "64px";
+      menuPart1.style.display = "block"
+      menuPart2.style.display = "block"
+      buttonMenu.innerHTML = "close"
+    }
+    else if (isMenuOpen === 'false') {
+      menu.style.height = "30px";
+      menuWrapper.style.height = "30px";
+      menuPart1.style.display = "none"
+      menuPart2.style.display = "none"
+      buttonMenu.innerHTML = "open"
+    }
+  }
+  if (isMenuOpen === 'true' && !initial){
+    menu.style.height = "30px";
+    menuWrapper.style.height = "30px";
+    localStorage.setItem('isMenuOpen', false);
+    menuPart1.style.display = "none"
+    menuPart2.style.display = "none"
+    buttonMenu.innerHTML = "open"
+  }
+  else if (isMenuOpen === 'false' && !initial) {
+    menu.style.height = "64px";
+    menuWrapper.style.height = "64px";
+    localStorage.setItem('isMenuOpen', true);
+    menuPart1.style.display = "block"
+    menuPart2.style.display = "block"
+    buttonMenu.innerHTML = "close"
+  }
+}

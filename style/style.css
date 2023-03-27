@@ -301,7 +301,7 @@ main h3 {
   margin-top: 60px;
   text-align: center;
   font-weight: 300;
-  font-size: 32px;
+  font-size: 64px;
 }
 
 main .our-services p {
@@ -1005,7 +1005,7 @@ footer {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 840px) {
   .menu__wrapper {
     -webkit-box-pack: end !important;
         -ms-flex-pack: end !important;
@@ -1100,7 +1100,7 @@ footer {
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 840px) {
   .menu__burger {
     display: none;
   }
@@ -1121,13 +1121,13 @@ footer {
   }
 }
 
-@media (min-width: 767px) and (max-width: 1200px) {
+@media (min-width: 840px) and (max-width: 1200px) {
   .our-dish .our-dish__content .wrapper {
     width: 50%;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 840px) {
   .our-dish .our-dish__content .wrapper {
     width: 100%;
   }
@@ -1255,4 +1255,19 @@ textarea:hover {
 
 #submit:hover {
   color: #e2dedb;
+}
+
+.buttonWrapper {
+  display:flex;
+  justify-content:flex-end;
+}
+
+.buttonWrapper button{
+  height:15px;
+  width:70px;
+  line-height: 15px;
+  color:white;
+  border-radius: 0 0 10px 10px;
+  margin-right:100px;
+  background-color: #363840;
 }
